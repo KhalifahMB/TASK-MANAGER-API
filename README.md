@@ -12,15 +12,15 @@ Welcome to the Task Manager API! This API allows you to manage tasks through RES
    - Request Body: JSON
      ```json
      {
-       "username": "your_username",
-       "email": "your_email@example.com",
-       "password": "your_password"
+     	"username": "your_username",
+     	"email": "your_email@example.com",
+     	"password": "your_password"
      }
      ```
    - Response: JSON
      ```json
      {
-       "token": "your_auth_token"
+     	"token": "your_auth_token"
      }
      ```
 
@@ -32,14 +32,14 @@ Welcome to the Task Manager API! This API allows you to manage tasks through RES
    - Request Body: JSON
      ```json
      {
-       "username": "your_username",
-       "password": "your_password"
+     	"username": "your_username",
+     	"password": "your_password"
      }
      ```
    - Response: JSON
      ```json
      {
-       "token": "your_auth_token"
+     	"token": "your_auth_token"
      }
      ```
 
@@ -55,22 +55,22 @@ Welcome to the Task Manager API! This API allows you to manage tasks through RES
    - Response: JSON array of task objects
      ```json
      [
-       {
-         "id": 1,
-         "title": "Task 1",
-         "description": "Task 1 description",
-         "created_at": "2023-08-02T12:34:56Z",
-         "updated_at": "2023-08-02T12:34:56Z",
-         "due_date": "2023-08-10T00:00:00Z",
-         "is_completed": false,
-         "priority": "low",
-         "assignee": {
-           "id": 1,
-           "username": "assignee_username",
-           "email": "assignee_email@example.com"
-         }
-       },
-       // More task objects...
+     	{
+     		"id": 1,
+     		"title": "Task 1",
+     		"description": "Task 1 description",
+     		"created_at": "2023-08-02T12:34:56Z",
+     		"updated_at": "2023-08-02T12:34:56Z",
+     		"due_date": "2023-08-10T00:00:00Z",
+     		"is_completed": false,
+     		"priority": "low",
+     		"assignee": {
+     			"id": 1,
+     			"username": "assignee_username",
+     			"email": "assignee_email@example.com"
+     		}
+     	}
+     	// More task objects...
      ]
      ```
 
@@ -86,29 +86,29 @@ Welcome to the Task Manager API! This API allows you to manage tasks through RES
    - Request Body: JSON
      ```json
      {
-       "title": "Task title",
-       "description": "Task description",
-       "due_date": "YYYY-MM-DD",
-       "is_completed": false,
-       "priority": "low"
+     	"title": "Task title",
+     	"description": "Task description",
+     	"due_date": "YYYY-MM-DD",
+     	"is_completed": false,
+     	"priority": "low"
      }
      ```
    - Response: JSON object of the created task
      ```json
      {
-       "id": 2,
-       "title": "Task title",
-       "description": "Task description",
-       "created_at": "2023-08-02T12:34:56Z",
-       "updated_at": "2023-08-02T12:34:56Z",
-       "due_date": "2023-08-10T00:00:00Z",
-       "is_completed": false,
-       "priority": "low",
-       "assignee": {
-         "id": 1,
-         "username": "your_username",
-         "email": "your_email@example.com"
-       }
+     	"id": 2,
+     	"title": "Task title",
+     	"description": "Task description",
+     	"created_at": "2023-08-02T12:34:56Z",
+     	"updated_at": "2023-08-02T12:34:56Z",
+     	"due_date": "2023-08-10T00:00:00Z",
+     	"is_completed": false,
+     	"priority": "low",
+     	"assignee": {
+     		"id": 1,
+     		"username": "your_username",
+     		"email": "your_email@example.com"
+     	}
      }
      ```
 
