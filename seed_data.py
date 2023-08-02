@@ -1,3 +1,6 @@
+from tasks.models import Task
+from django.utils import timezone
+import random
 import os
 import django
 
@@ -5,9 +8,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'task_manager.settings')
 django.setup()
 
-import random
-from django.utils import timezone
-from tasks.models import Task
 
 def generate_dummy_data(num_entries=50):
     task_titles = [
@@ -92,6 +92,7 @@ def generate_dummy_data(num_entries=50):
             # due_date=due_date,
             is_completed=is_completed,
             priority=priority,
+            assignee=1
         )
 
 
