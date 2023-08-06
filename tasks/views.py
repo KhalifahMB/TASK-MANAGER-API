@@ -9,6 +9,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.status import HTTP_201_CREATED
 from .serializers import UserSerializer
+from .permissions import IsSuperuserOrAssignee
 
 
 class UserRegistrationView(generics.CreateAPIView):
@@ -30,7 +31,11 @@ class TaskListView(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated]
     search_fields = ['title', 'description']
 
+    def perform_create(self, serializer):
+        serializer.save(assignee=self.request.user)
+
 
 class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    permission_classes = [IsAuthenticated, IsSuperuserOrAssignee]

@@ -1,6 +1,6 @@
 # Task Manager API - Readme
 
-Welcome to the Task Manager API! By `Muhammad Ahmad El-kufahn`. This API allows you to manage tasks through RESTful endpoints. Below, you'll find details about each route, the route URL, how to access the URLs, route functionalities, and additional notes.
+Welcome to the Task Manager API! By **Muhammad Ahmad El-kufahn**. This API allows you to manage tasks through RESTful endpoints. Below, you'll find details about each route, the route URL, how to access the URLs, route functionalities, and additional notes.
 
 ## API Endpoints
 
@@ -126,6 +126,7 @@ Welcome to the Task Manager API! By `Muhammad Ahmad El-kufahn`. This API allows 
 ## Permissions
 
 - The `permission_classes = [IsAuthenticated]` added in the `views.py` file ensures that users must be authenticated (i.e., have a valid token) to access the task-related endpoints.
+- The `IsSuperuserOrAssignee` custom permission class allows only the superuser or the task's assignee to access the Task Detail, Update, and Delete endpoint.
 
 ## Additional Notes
 
